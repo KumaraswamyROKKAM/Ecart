@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="calc">
+            <div class="result">
+                <input id="outer" type="text" name="display">
+                <hr>
+                <input id="inner" type="text" name="display">
+
+            </div>
+            <div class="keys">
+
+                <div class="upper">
+                    <div>
+                    <form >
+                        <input type="button" value="AC"  onclick="outer.value=''" & onclick="inner.value=''">
+                        <input type="button" value="DE"  onclick="outer.value=outer.value.toString().slice(0,-1)">
+                        <input type="button" value="."  onclick="outer.value+='.'">
+                        <input type="button" value="/"  onclick="outer.value+='/'">
+                    </form>
+                </div>
+                <hr>
+                    <div>
+                    <form >
+                        <input type="button" value="7"  onclick="outer.value+=7">
+                        <input type="button" value="8"  onclick="outer.value+=8">
+                        <input type="button" value="9"  onclick="outer.value+=9">
+                        <input type="button" value="*"  onclick="outer.value+='*'">
+                    </form>
+                </div>
+                <hr>
+                    <div>
+                    <form >
+                        <input type="button" value="4"  onclick="outer.value+=4">
+                        <input type="button" value="5"  onclick="outer.value+=5">
+                        <input type="button" value="6"  onclick="outer.value+=6">
+                        <input type="button" value="+"  onclick="outer.value+='+'">
+                    </form>
+                </div>
+                <hr>
+                    <div>
+                        <form >
+                        <input type="button" value="1"  onclick="outer.value+=1">
+                        <input type="button" value="2"  onclick="outer.value+=2">
+                        <input type="button" value="3"  onclick="outer.value+=3">
+                        <input type="button" value="-"  onclick="outer.value+='-'">
+                    </form>
+                     </div>
+                     <hr>
+                    <div>
+                    <form >
+                        <input type="button" value="0" onclick="outer.value+=0">
+                        <input type="button" value="00"  onclick="outer.value+='00'">
+                        <input type="button" value="Ans" onclick="outer.value=inner.value">
+                        <input type="button" value="="  onclick="inner.value=eval(outer.value)">
+                    </form>
+                     </div>
+                     <hr>
+
+                </div>
+                <div class="lower">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js">
+
+    </script>
+    
+</body>
+</html>
